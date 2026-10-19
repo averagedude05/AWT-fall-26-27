@@ -50,10 +50,8 @@ export class ProductService {
                 throw new NotFoundException("Product with ID not found");
             }
             Object.assign(product, dto);
-            const { id: uid, ...rest } = product;
-            const result = await this.productRepository.update({ id: id }, rest);
-            console.log(result);
-            return result;
+            const {id: uid, created_at,updated_at, ...rest} = product;
+            return await this.productRepository.update({ id: id }, rest);
         } catch (error) {
             throw error;
         }

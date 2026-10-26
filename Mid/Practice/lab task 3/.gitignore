@@ -401,3 +401,4 @@ package-lock.json
 dist
 .webpack
 .serverless/**/*.zip
+.env.*

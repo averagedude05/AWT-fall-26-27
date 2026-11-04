@@ -29,6 +29,26 @@ export class CreateTable1792425166000 implements MigrationInterface {
                         isNullable: false,
                     },
                     {
+                        name: "age",
+                        type: "int",
+                        isNullable: false,
+                    },
+                    {
+                        name: "phone",
+                        type: "varchar",
+                        isNullable: false,
+                    },
+                    {
+                        name: "accounttype",
+                        type: "varchar",
+                        isNullable: false,
+                    },
+                    {
+                        name:"address",
+                        type:"varchar",
+                        isNullable:true,
+                    },
+                    {
                         name: "created_at",
                         type: "timestamp",
                         default: "CURRENT_TIMESTAMP(6)",

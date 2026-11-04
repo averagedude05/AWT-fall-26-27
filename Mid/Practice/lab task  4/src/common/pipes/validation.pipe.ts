@@ -11,7 +11,11 @@ import { plainToInstance } from "class-transformer";
 export class ValidationPipe implements PipeTransform<any> {
   constructor(
     private options: ValidatorOptions = {
+//Imagine  DTO allows only name and email.
+// whitelist: true
+// If someone sends an extra field like role, it removes that field.
       whitelist: true,
+      //forbidNonWhitelisted = Reject requests with unwanted fields.
       forbidNonWhitelisted: true,
     },
   ) {}

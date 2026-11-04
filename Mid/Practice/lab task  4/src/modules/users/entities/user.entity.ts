@@ -11,6 +11,14 @@ export class User{
     email!:string;
     @Column()
     password!:string;
+    @Column()
+    age!:number;
+    @Column()
+    phone!:string;
+    @Column()
+    accounttype!:string;
+    @Column()
+    address!:string;
     @CreateDateColumn()
     created_at!:Date;
     @UpdateDateColumn()
